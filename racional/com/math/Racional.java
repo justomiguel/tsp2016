@@ -11,7 +11,7 @@ public class Racional {
 	}
 
 	public void add(Racional elOtro){
-		int auxDen = this.obtnerMCM(this.den, elOtro.getDen());
+		int auxDen = this.obtenerMCM(this.den, elOtro.getDen());
 		this.num = auxDen/this.den*this.num + auxDen/elOtro.getDen()*elOtro.getNum();
 		this.den = auxDen;
 	}
@@ -26,7 +26,7 @@ public class Racional {
 		}
 		int mayor = obtenerMayor(n1, n2);
 		
-		
+		return n2;		
 	}
 
 	private int obtenerMayor(int n1, int n2){
