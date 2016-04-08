@@ -1,19 +1,25 @@
 import com.math.Racional;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args){
-
-		Racional numero = new Racional(3,4);
-		Racional otroNumero = new Racional(1,2);
 		
-		System.out.println(numero);
-		System.out.println(otroNumero);
+		Scanner sc = new Scanner(System.in);
 
-		numero = numero.sumaFea(otroNumero);
+		System.out.println("Ingresa el primer racional");
+		int num1 = sc.nextInt();
 
-		System.out.println(numero);
-                System.out.println(otroNumero);
+		Racional numero = new Racional(num1,sc.nextInt());
+
+                System.out.println("Ingresa el segundo racional");
+
+		Racional otroNumero = new Racional(sc.nextInt(),
+						sc.nextInt());
+		
+		numero.add(otroNumero);
+		
+                System.out.println("Resultado de la suma: "+numero);
 
 		
 
